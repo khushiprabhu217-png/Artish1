@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Shows | Vilas Nayak</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: whitesmoke;
+}
+
+/* NAVBAR */
+header {
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #000;
+    font-weight: 600;
+    z-index: 1000;
+}
+body, header, nav, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+header .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 22px;          /* spacing between items */
+    text-decoration: none;
+    font-size: 17px;         /* 🔥 matches 2nd image */
+    font-weight: 500;        /* 🔥 not bold, not light */
+    letter-spacing: 0.3px;
+}
+
+header nav a:hover {
+    color: #f5a623;
+}
+
+/* SHOWS SECTION */
+.shows-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.shows-section h1 {
+    font-size: 42px;
+    color: #f5a623;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+/* GRID */
+.shows-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 50px;
+}
+
+/* SHOW ITEM */
+.show-item {
+    cursor: pointer;
+    max-width: 420px;
+}
+
+/* IMAGE */
+.show-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.show-item:hover img {
+    transform: scale(1.05);
+}
+
+/* TITLE */
+.show-title {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #f5a623;
+    text-align: center;
+}
+
+/* DESCRIPTION (HIDDEN BY DEFAULT) */
+.show-desc {
+    display: none;
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ccc;
+    text-align: center;
+}
+
+/* ACTIVE */
+.show-item.active .show-desc {
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #222;
+    padding: 30px 50px 25px;
+    background: #000;
+    margin-top: 120px;
+}
+
+/* MAIN ROW */
+.footer-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CENTER NAV */
+.footer-nav {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-nav a:hover {
+    color: #f5a623;
+}
+
+/* RIGHT ICONS */
+.footer-social {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* Brand colors */
+.footer-social a:nth-child(1) { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); }
+.footer-social a:nth-child(2) { background: #ff0000; }
+.footer-social a:nth-child(3) { background: #1877f2; }
+.footer-social a:nth-child(4) { background: #0a66c2; }
+
+.footer-social a:hover {
+    transform: scale(1.15);
+}
+
+/* LINE */
+.footer-line {
+    width: 320px;
+    margin: 18px auto;
+    border: none;
+    border-top: 1px solid #222;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">VARNA VILAS</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="arts.html">Arts</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shows.html" style="color:#f5a623;">Shows</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- SHOWS -->
+<section class="shows-section" id="showsSection">
+    <h1>Shows</h1>
+
+    <div class="shows-grid">
+
+        <div class="show-item">
+            <img src="asias.jpg" alt="Asia's Got Talent">
+            <div class="show-title">Asia’s Got Talent</div>
+            <div class="show-desc">
+                Captivating audiences on Asia’s Got Talent with a breathtaking live painting performance that 
+                transformed emotion into art within moments. His bold strokes, dramatic use of color, and powerful stage 
+                presence created a deeply immersive visual story. The act stood out as a perfect blend of creativity, passion, 
+                and theatrical expression.
+            </div>
+        </div>
+
+        <div class="show-item">
+            <img src="bhootakola.jpg" alt="Bhootakola">
+            <div class="show-title">Bhootakola</div>
+            <div class="show-desc">
+                The powerful spirit of Bhoota Kola to life through an intense live painting performance rooted in ritual and tradition. 
+                With bold movements and fiery colors, the artwork captures the raw energy, devotion, and divine presence of the folk deity. 
+                The performance becomes a visual invocation, blending art, culture, and spirituality on stage.
+            </div>
+        </div>
+
+        <div class="show-item">
+            <img src="abdulkalam.jpg" alt="Abdul kalam">
+            <div class="show-title">Abdul Kalam</div>
+            <div class="show-desc">
+                Vilas Nayak shares a warm and respectful moment with a revered national leader, reflecting recognition and appreciation 
+                for his artistic journey. The interaction captures humility, inspiration, and the powerful connection between art and leadership. 
+                Standing before a striking portrait, the moment symbolizes creativity being acknowledged at the highest level.
+            </div>
+        </div>
+
+         <div class="show-item">
+            <img src="pele.jpg" alt="Pele">
+            <div class="show-title">Pele</div>
+            <div class="show-desc">
+                Vilas Nayak unveils a live portrait painting before an esteemed audience, capturing the likeness with warmth and expressive detail. 
+                The moment reflects the power of art to honor leadership and legacy through live performance. Applause and admiration in the room 
+                highlight the impact of creativity presented on a distinguished stage.
+            </div>
+        </div>
+
+        <div class="show-item">
+            <img src="kantara.jpg" alt="Solo Art Showcase">
+            <div class="show-title">Kantara</div>
+            <div class="show-desc">
+                Vilas Nayak stands beside a powerful live painting inspired by traditional folk expression and 
+                the spirit of the *Kantara* movie, symbolizing cultural identity and pride. The artwork reflects deep-rooted 
+                heritage brought to life through bold colors and expressive form. This moment honors age-old traditions through a 
+                contemporary artistic performance rooted in cinematic and cultural influence.
+
+            </div>
+        </div>
+
+        <div class="show-item">
+            <img src="dalailama.jpg" alt="Solo Art Showcase">
+            <div class="show-title">Dalailama</div>
+            <div class="show-desc">
+                A live portrait of the Dalai Lama, capturing compassion, humility, and spiritual grace. The painting becomes
+                 a moment of reverence as art and spirituality meet in public space. This tribute reflects peace, respect, and 
+                 universal human values.
+            </div>
+        </div>
+
+        <div class="show-item">
+            <img src="yakshagana.jpg" alt="Solo Art Showcase">
+            <div class="show-title">Yakshagana</div>
+            <div class="show-desc">
+                In a dramatic stage setting, Vilas Nayak transforms movement and music into a dynamic live painting performance. 
+                Each brushstroke unfolds in rhythm with the performance, creating a powerful visual narrative. The act blends theatre, 
+                dance, and art into an immersive cultural experience.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+
+        <!-- CENTER NAV -->
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="arts.html">Arts</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shows.html">Shows</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <!-- RIGHT SOCIAL ICONS -->
+        <div class="footer-social">
+            <a href="https://www.instagram.com/vilas_nayak" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@vilasnayak" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/vilasnayakart" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <p class="footer-copy">© Vilas Nayak. All rights reserved.</p>
+</footer>
+
+<script>
+const items = document.querySelectorAll(".show-item");
+const section = document.getElementById("showsSection");
+
+items.forEach(item => {
+    item.addEventListener("click", e => {
+        e.stopPropagation(); // prevent empty click close
+
+        // close all others
+        items.forEach(i => {
+            if (i !== item) i.classList.remove("active");
+        });
+
+        // toggle current
+        item.classList.toggle("active");
+    });
+});
+
+// click on empty space closes all
+section.addEventListener("click", () => {
+    items.forEach(item => item.classList.remove("active"));
+});
+</script>
+</body>
+</html>

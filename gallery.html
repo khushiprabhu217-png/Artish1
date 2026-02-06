@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Gallery | Vilas Nayak</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: whitesmoke;
+}
+
+/* NAVBAR */
+header {
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #000;
+    font-weight: 600;
+    z-index: 1000;
+}
+body, header, nav, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+header .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 22px;          /* spacing between items */
+    text-decoration: none;
+    font-size: 17px;         /* 🔥 matches 2nd image */
+    font-weight: 500;        /* 🔥 not bold, not light */
+    letter-spacing: 0.3px;
+}
+
+header nav a:hover {
+    color: #f5a623;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    padding: 70px 80px;
+    text-align: center;
+}
+
+/* TITLE */
+.gallery-section h1 {
+    font-size: 42px;
+    color: #f5a623;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-section h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 3px;
+    background: linear-gradient(to right, #f5a623, #ffcc66);
+}
+
+/* MASONRY GRID */
+.gallery-grid {
+    column-count: 3;
+    column-gap: 35px;
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+}
+
+/* GALLERY ITEM */
+.gallery-item {
+    margin-bottom: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    break-inside: avoid;
+    position: relative;
+    cursor: pointer;
+}
+
+/* IMAGE */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER ZOOM */
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #222;
+    padding: 30px 50px 25px;
+    background: #000;
+    margin-top: 120px;
+}
+
+/* MAIN ROW */
+.footer-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CENTER NAV */
+.footer-nav {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-nav a:hover {
+    color: #f5a623;
+}
+
+/* RIGHT ICONS */
+.footer-social {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* Brand colors */
+.footer-social a:nth-child(1) { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); }
+.footer-social a:nth-child(2) { background: #ff0000; }
+.footer-social a:nth-child(3) { background: #1877f2; }
+.footer-social a:nth-child(4) { background: #0a66c2; }
+
+.footer-social a:hover {
+    transform: scale(1.15);
+}
+
+/* LINE */
+.footer-line {
+    width: 320px;
+    margin: 18px auto;
+    border: none;
+    border-top: 1px solid #222;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">VARNA VILAS</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="arts.html">Arts</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shows.html">Shows</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+    <h1>Gallery</h1>
+
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="charlie.jpg" alt="Charlie artwork"></div>
+        <div class="gallery-item"><img src="zubin.jpeg" alt="zubin artwork"></div>
+        <div class="gallery-item"><img src="michael.jpeg" alt="Michael"></div>
+        <div class="gallery-item"><img src="joker.jpg" alt="Joker artwork"></div>
+        <div class="gallery-item"><img src="isro.jpeg" alt="Isro"></div>
+        <div class="gallery-item"><img src="shahrukh.jpg" alt="Shah Rukh Khan artwork"></div>
+        <div class="gallery-item"><img src="abdulkalam.jpg" alt="Abdul Kalam artwork"></div>
+        <div class="gallery-item"><img src="salmankhan.jpg" alt="Salman Khan artwork"></div>
+        <div class="gallery-item"><img src="nba.jpg" alt="NBA artwork"></div>
+        <div class="gallery-item"><img src="cat.jpeg" alt="Cat"></div>
+        <div class="gallery-item"><img src="art.jpg" alt="Artwork"></div>
+        <div class="gallery-item"><img src="venkatesh.jpeg" alt="Venkatesh"></div>
+        <div class="gallery-item"><img src="jungkook.jpeg" alt="jungkook"></div>
+        <div class="gallery-item"><img src="Ganesha.jpg" alt="Ganesh"></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+
+        <!-- CENTER NAV -->
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="arts.html">Arts</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shows.html">Shows</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <!-- RIGHT SOCIAL ICONS -->
+        <div class="footer-social">
+            <a href="https://www.instagram.com/vilas_nayak" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@vilasnayak" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/vilasnayakart" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <p class="footer-copy">© Vilas Nayak. All rights reserved.</p>
+</footer>
+</body>
+</html>

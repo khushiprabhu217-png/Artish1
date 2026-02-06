@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vilas Nayak</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url('nba.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+/* NAVBAR */
+/* FIXED HEADER */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffdf6c;
+}
+.nav-title {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: auto;   /* 🔥 pushes title to right */
+}
+
+/* LOGO / TITLE */
+.center-title {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.center-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.center-title p {
+    font-size: 22px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* SOCIAL ICONS BELOW TITLE */
+.social {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: white;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* Specific platform colors */
+.instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+.youtube { background: #ff0000; border-radius: 14px; }
+.facebook { background: #1877f2; }
+.linkedin { background: #0a66c2; }
+
+/* Hover effect */
+.icon:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+/* BOTTOM TEXT */
+.bottom-text {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.bottom-text h2 {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.bottom-text p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Glow overlay */
+.hero::after {
+    content: "";
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 100px 20px;
+    background: #000;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-section .email a {
+    color: #f5a623;
+    font-size: 18px;
+    text-decoration: none;
+}
+.footer {
+    background: #000;
+    color: #aaa;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* LEFT TEXT */
+.footer-left h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-left: auto;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* CENTER NAV LINKS */
+.footer-center {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-center a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-center a:hover {
+    color: #ffdf6c;
+}
+
+/* RIGHT SOCIAL ICONS */
+.footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+}
+
+/* Social colors */
+.footer-right .instagram { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+.footer-right .youtube { background: #ff0000; }
+.footer-right .facebook { background: #1877f2; }
+.footer-right .linkedin { background: #0a66c2; }
+
+/* COPYRIGHT */
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #777;
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+
+    <!-- NAVIGATION -->
+     
+    <nav>
+        <div class="nav-left">VARNA VILAS</div>
+         <div class="nav-center"></div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="arts.html">Arts</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shows.html">Shows</a>
+        <a href="index.html">Contact</a>
+    </nav>
+
+    <!-- MAIN TITLE -->
+    <div class="center-title">
+        <h1>Vilas Nayak</h1>
+        <p>The Speed Painting Sensation</p>
+
+        <!-- SOCIAL ICONS -->
+        <div class="social">
+            <a href="https://www.instagram.com/vilas_nayak" target="_blank" class="icon instagram" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/Vilas Nayak" target="_blank" class="icon youtube" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/vilasnayakart" target="_blank" class="icon facebook" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/Vilas Nayak" target="_blank" class="icon linkedin" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>
+        For any <strong>commission orders</strong>, 
+        <strong>live art events</strong>, and 
+        <strong>collaborations</strong>,
+        please reach out.
+    </p>
+
+<p>
+  <strong>Email:</strong>
+  <a href="mailto:info@vilasnayakart.com?subject=Inquiry&body=Hello, I would like to contact you">
+    info@vilasnayakart.com
+  </a>
+</p>
+    </p>
+</section>
+<footer class="footer">
+
+
+    <div class="footer-center">
+        <a href="vilasnayak.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="arts.html">Arts</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shows.html">Shows</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+        © Vilas Nayak. All rights reserved.
+    </div>
+
+</footer>
+
+</body>
